@@ -15,11 +15,27 @@ body {
     background-color: #ffffff;
     color: #000000;
     font-size: 1rem; /* 16px */
+    display: flex;
+    flex-direction: column;
 }
 
 p {
     text-align: justify;
     text-indent: 1.5rem; /* 24px */
+}
+
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+section{
+    max-width: 1200px;
+    width: 100%;
+
 }
 
 .header {
@@ -59,6 +75,7 @@ p {
     background: url("../imgs/baleia.png") no-repeat center center;
     background-size: cover;
     color: #ffffff;
+    max-width: none;
 }
 
 .banner-section-content {
@@ -87,7 +104,6 @@ p {
 }
 
 .tech-section-content {
-    max-width: 75rem; /* 1200px */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -109,7 +125,6 @@ p {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 75rem; /* 1200px */
 }
 
 .section-base-content {
@@ -123,9 +138,12 @@ p {
     flex-direction: row-reverse;
 }
 
-.section-base-content img,
+.section-base-content img{
+    width: 30%;
+
+}
 .section-base-content .text-container {
-    width: 100%;
+    flex: 1;
 }
 
 .titulo-secao-base {
@@ -157,7 +175,6 @@ p {
 
 .section-vidas-content {
     display: flex;
-    max-width: 75rem; /* 1200px */
     padding: 6.25rem; /* 100px */
     flex-direction: column;
     flex: 1;
@@ -215,7 +232,6 @@ p {
 
 .section-recursos-content {
     display: flex;
-    max-width: 75rem; /* 1200px */
     justify-content: space-around;
     width: 100%;
 }
@@ -254,6 +270,7 @@ footer {
     padding: 2.5rem; /* 40px */
     text-align: center;
     margin-top: 3.125rem; /* 50px */
+    width: 100%;
 }
 
 footer .footer-content {
@@ -274,6 +291,7 @@ footer .footer-content {
 .section-map {
     display: flex;
     height: 37.5rem; /* 600px */
+    margin-bottom: 20px;
 }
 
 .section-map-content {
@@ -320,30 +338,78 @@ footer .footer-content {
     padding: 0.875rem 1.25rem; /* 14px 20px */
 }
 
-.section-artigo {
+.section-artigos h2{
+    font-size: 3rem;
+}
+
+.artigo {
     display: flex;
 }
 
+
 .artigo-title {
-    font-size: 3.125rem; /* 50px */
+    font-size: 2rem;
 }
 
 .artigo-content {
-    font-size: 1.25rem; /* 20px */
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 4.6875rem; /* 75px */
+    gap: 5rem;
     padding: 3.75rem; /* 60px */
+    flex: 1;
 }
 
 .img-artigo {
     display: block;
     text-align: center;
-    flex: 1;
-    height: 37.5rem; /* 600px */
-    width: 12.5rem; /* 200px */
+    width: 45%;
+    object-fit: cover;
 }
+
+
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.carousel {
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.artigo {
+    min-width: 100%;
+    padding: 20px;
+}
+
+
+
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
 
 /* medias */
 
